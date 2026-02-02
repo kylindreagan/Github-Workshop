@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.12"]
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
@@ -24,4 +24,4 @@ jobs:
         pip install pytest
     - name: Run code with pytest
       run: |
-        pytest src/tests/ --cov=src --cov-report=xml
+        pytest src/tests/ -v

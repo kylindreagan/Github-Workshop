@@ -2,6 +2,9 @@ name: Run Unit Test via Pytest
 
 on: [push]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest

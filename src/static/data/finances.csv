@@ -1,0 +1,129 @@
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,"Annual financial data
+Alphabet Inc.",,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,2013-2017,,,,,,,,,,,,
+,Powered by connected sheets,,,Learn more,,,,,,,,,
+,,,,,,,,,,,,,
+,"This is a sample financial dashboard using public data from the U.S. Securities and Exchange Commission, hosted on BigQuery. The data is connected to this spreadsheet via the Data tab at the bottom using connected sheets. The pivot tables, charts, and functions in this spreadsheet reference that data. To refresh the data, or to perform your own analysis, you need access to BigQuery.",,,,,,,,,,,,Tip
+,,,,,,,,,,,,,"To change the theme for this dashboard, choose Theme from the Format menu. Theme styles including fonts and colors will be applied consistently across this spreadsheet"
+,Get started with BigQuery data in Google Sheets,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,DATA SOURCE,,,,TOTAL ROWS,,,,,,,,
+,SEC Public Dataset,,,,68980952,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,Income statement,,,,,,,,,,,,
+,$ in millions,,,,,,,,,,,,
+,,,2013,,2014,2015,2016,2017,,,,,How this table was created
+,Revenues,,,"55,519","66,001","74,989","90,272","110,855",,,,,"1. A connection to the SEC data is created by selecting Connect to BigQuery under Data > Data connectors
+
+2. A calculated column is added to the SEC data, viewable on the right side of the Data sheet. This column extracts the financial year from the period date
+
+3. A pivot table is created on the Income sheet showing values for the relevant income fields, filtered by company name, form type (10-K) and year
+
+4. The pivot table values are displayed in the income statement at left using the formula =Sheet!reference. Trends are displayed using the =SPARKLINE formula"
+,Cost of revenues,,,"21,993","25,691","28,164","35,138","45,583",,,,,
+,Research and development,,,"7,137","9,832","12,282","13,948","16,625",,,,,
+,Sales and marketing,,,"6,554","8,131","9,047","10,485","12,893",,,,,
+,General and administrative,,,"4,432","5,851","6,136","6,985","6,872",,,,,
+,European Commission fine,,,0,0,0,0,"2,736",,,,,
+,Total costs and expenses,,,"40,116","49,505","55,629","66,556","84,709",,,,,
+,Income from operations,,,"15,403","16,496","19,360","23,716","26,146",,,,,
+,"Other income (expense), net",,,496,763,291,434,"1,047",,,,,
+,Income before income taxes,,,"15,899","17,259","19,651","24,150","27,193",,,,,
+,Provision for income taxes,,,"2,739","3,639","3,303","4,672","14,531",,,,,
+,Net income,,,"12,733","14,136","16,348","19,478","12,662",,,,,
+,Less: Adjustment Payment to Class C capital stockholders,,,0,0,522,0,0,,,,,
+,,,,,,,,,,,,,
+,Net income available to all stockholders,,,"12,733","14,136","15,826","19,478","12,662",,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,How this chart was created
+,,,,,,,,,,,,,"1. Calculated columns are created on the connected Data sheet for Revenues and Net income
+
+2. A chart is created by clicking the Chart button on the connected Data sheet
+
+3. X-axis is set to year. The calculated columns above are selected for the Series. Sort is set to year
+
+4. Filters are used to isolate the relevant fields from the annual 10-K forms"
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,Balance sheet,,,,,,,,,,,,
+,$ in millions,,,,,,,,,,,,
+,,,2013*,,2014,2015,2016,2017,,,,,How this table was created
+,Total cash,,–,,"64,395","73,066","86,333","101,871",,,,,"1. A pivot table is created on the Balance sheet sheet showing values for the relevant fields, filtered by company name, form types (10-K and 10-K/A) and year
+
+2. The pivot table values are displayed in the income statement at left using the formula =Sheet!reference. Trends are displayed using the =SPARKLINE formula"
+,Net receivables,,–,,"9,383","11,556","14,137","18,336",,,,,
+,Current assets,,–,,"78,656","90,114","105,408","124,308",,,,,
+,Total assets,,–,,"129,187","147,461","167,497","197,295",,,,,
+,Current liabilities,,–,,"16,779","19,310","16,756","24,183",,,,,
+,Total liabilities,,–,,–,"27,130","28,461","44,793",,,,,
+,Stockholders' equity,,–,,"103,860","120,331","139,036","152,502",,,,,
+,Total liabilities and stockholders' equity,,,–,"129,187","147,461","167,497","197,295",,,,,
+,,,,,,,,,,,,,
+,*Data not available,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,How this chart was created
+,,,,,,,,,,,,,"1. Calculated columns are created on the connected Data sheet for Total assets and Total liabilities
+
+2. A chart is created by clicking the Chart button on the connected Data sheet
+
+3. X-axis is set to year. The calculated columns above are selected for the Series. Sort is set to year
+
+4. Filters are used to isolate the relevant fields from the annual 10-K and 10-K/A forms"
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,Cash flow,,,,,,,,,,,,
+,$ in millions,,,,,,,,,,,,
+,,,2013,,2014,2015,2016,2017,,,,,How this table was created
+,Net cash from operating activities,,"18,659",,"45,400","79,168","72,072","37,091",,,,,"1. A pivot table is created on the Cash flow sheet sheet showing values for the relevant fields, filtered by company name, form type (10-K) and year
+
+2. The pivot table values are displayed in the income statement at left using the formula =Sheet!reference. Trends are displayed using the =SPARKLINE formula"
+,Net cash used for investing activities,,"-13,679",,"-42,110","-71,133","-62,330","-31,401",,,,,
+,Net cash used for financing activities,,-857,,"-3,526","-12,127","-16,664","-8,298",,,,,
+,Net change in cash,,"4,120",,"-1,102","-5,394","-7,262","-2,203",,,,,
+,"Cash and equivalents at end of period
+",,"37,796",,"55,041","49,647","25,836","10,715",,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,How this chart was created
+,,,,,,,,,,,,,"1. Calculated columns are created on the connected Data sheet for the three Net cash fields
+
+2. A chart is created by clicking the Chart button on the connected Data sheet
+
+3. X-axis is set to year. The calculated columns above are selected for the Series. Sort is set to year
+
+4. Filters are used to isolate the relevant fields from the annual 10-K forms"

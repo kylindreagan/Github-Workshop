@@ -24,6 +24,9 @@ def might_be_prime(n):
         return True
     else:
         return False
-    
+
 def sum_2(a,b):
     return a + b
+
+def abs(a):
+    return (a**.5)**2

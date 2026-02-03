@@ -1,8 +1,5 @@
 def is_div_8(a):
-    if isinstance(a, int):
-        return a % 8 == 0
-    else:
-        return False
+    return a % 8 == 0
 
 def get_count(n):
     if not isinstance(n, int):

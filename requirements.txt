@@ -1,5 +1,5 @@
 pandas>=1.0.0
 pytest
 numpy
-pygame
+pygame-ce
 PyOpenGL

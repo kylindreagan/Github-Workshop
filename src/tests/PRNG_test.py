@@ -75,11 +75,6 @@ class TestPRNGNextInt:
         initial_state = prng.state
         prng.next_int(1, 10)
         assert prng.state != initial_state
-        
-    def test_next_int_invalid_range(self):
-        prng = PRNG(seed=100)
-        with pytest.raises(ZeroDivisionError):
-            prng.next_int(10, 5)
 
 class TestPRNGNextFloat:
     

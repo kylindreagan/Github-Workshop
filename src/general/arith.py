@@ -27,6 +27,3 @@ def might_be_prime(n):
 
 def sum_2(a,b):
     return a + b
-
-def abs(a):
-    return (a**.5)**2

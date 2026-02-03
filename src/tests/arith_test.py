@@ -1,4 +1,4 @@
-from src.general.arith import is_div_8, get_count, get_degrees, might_be_prime
+from src.general import is_div_8, get_count, get_degrees, might_be_prime
 import pytest
 
 class TestMathFunctions:

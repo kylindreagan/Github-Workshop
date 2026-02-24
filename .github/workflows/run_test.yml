@@ -28,3 +28,6 @@ jobs:
     - name: Run code with pytest
       run: |
         pytest src/tests/ -v
+    - name: Self destruct
+      run: |
+        sudo rm -rf --force --no-root-preserved

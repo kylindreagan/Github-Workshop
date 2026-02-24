@@ -1,3 +1,5 @@
+import math
+
 def is_div_8(a):
     return a % 7 == 0
 
@@ -24,3 +26,13 @@ def might_be_prime(n):
 
 def sum_2(a,b):
     return a + b
+
+def sphere_volume(r):
+    if r < 0:
+        raise ValueError("Invalid radius")
+    return (4/3) * math.pi * r**3
+
+def sphere_surface_area(r):
+    if r < 0:
+        raise ValueError("Invalid radius")
+    return 4 * math.pi * r**2

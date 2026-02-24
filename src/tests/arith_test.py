@@ -1,5 +1,6 @@
-from src.general import is_div_8, get_count, get_degrees, might_be_prime
+from src.general import is_div_8, get_count, get_degrees, might_be_prime, sphere_volume, sphere_surface_area
 import pytest
+import math
 
 class TestMathFunctions:
     class TestIsDiv8:
@@ -148,6 +149,47 @@ class TestFunctionAnalysis:
     def test_is_div_8_with_floats(self):
         assert is_div_8(8.0) == True
         assert is_div_8(16.0) == True
+
+
+class TestSphere:
+
+    def test_sphere_volume_zero(self):
+        assert sphere_volume(0) == 0.0
+
+    def test_sphere_volume_positive(self):
+        assert math.isclose(sphere_volume(1), (4/3) * math.pi)
+        assert math.isclose(sphere_volume(3), (4/3) * math.pi * 27)
+
+    def test_sphere_volume_invalid(self):
+        with pytest.raises(ValueError, match="Invalid radius"):
+            sphere_volume(-1)
+
+    def test_sphere_surface_area_zero(self):
+        assert sphere_surface_area(0) == 0.0
+
+    def test_sphere_surface_area_positive(self):
+        assert math.isclose(sphere_surface_area(1), 4 * math.pi)
+        assert math.isclose(sphere_surface_area(5), 4 * math.pi * 25)
+
+    def test_sphere_surface_area_invalid(self):
+        with pytest.raises(ValueError, match="Invalid radius"):
+            sphere_surface_area(-1)
+
+    @pytest.mark.parametrize("r,expected_vol", [
+        (0, 0.0),
+        (1, (4/3) * math.pi),
+        (2, (4/3) * math.pi * 8),
+    ])
+    def test_sphere_volume_parametrized(self, r, expected_vol):
+        assert math.isclose(sphere_volume(r), expected_vol)
+
+    @pytest.mark.parametrize("r,expected_area", [
+        (0, 0.0),
+        (1, 4 * math.pi),
+        (2, 4 * math.pi * 4),
+    ])
+    def test_sphere_surface_area_parametrized(self, r, expected_area):
+        assert math.isclose(sphere_surface_area(r), expected_area)
 
 @pytest.fixture
 def divisible_by_8_numbers():
